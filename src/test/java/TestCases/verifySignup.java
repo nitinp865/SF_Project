@@ -17,6 +17,7 @@ public class verifySignup extends baseClass {
 		LPO.ClickOnTryForFree().click();
 		
 		SignupPageObjects SPO=new SignupPageObjects(driver);
+		//Explicit wait is not working
 		commonUtilities.handleExplicitWait(10, SPO.enterFirstName());
 		SPO.enterFirstName().sendKeys(constant.firstName);
 		SPO.enterLastName().sendKeys(constant.lastName);
