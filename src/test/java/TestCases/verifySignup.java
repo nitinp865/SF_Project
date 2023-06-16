@@ -18,7 +18,8 @@ public class verifySignup extends baseClass {
 		
 		SignupPageObjects SPO=new SignupPageObjects(driver);
 		//Explicit wait is not working
-		commonUtilities.handleExplicitWait(10, SPO.enterFirstName());
+		//commonUtilities.handleExplicitWait(10, SPO.enterFirstName());
+		Thread.sleep(2000);
 		SPO.enterFirstName().sendKeys(constant.firstName);
 		SPO.enterLastName().sendKeys(constant.lastName);
 		SPO.enterWorkEmail().sendKeys(constant.workEmail);
@@ -34,7 +35,8 @@ public class verifySignup extends baseClass {
 		SPO.enterPhone().sendKeys(constant.phone);
 		
 		//Country
-		commonUtilities.handleExplicitWait(10, SPO.ClickOnCountry());
+		//commonUtilities.handleExplicitWait(10, SPO.ClickOnCountry());
+		Thread.sleep(2000);
 		commonUtilities.handleStaticDropdown(SPO.ClickOnCountry(), 2);
 		
 		SPO.ClickOnAgreeCheckbox().click();
